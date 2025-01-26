@@ -1,0 +1,357 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SWATavatarmak
+  m_Mask: 01000000000000000000000001000000010000000000000000000000000000000000000001000000010000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Part1
+    m_Weight: 0
+  - m_Path: Part1/cube_1
+    m_Weight: 1
+  - m_Path: Part1/cube_67
+    m_Weight: 1
+  - m_Path: Part1/cube_68
+    m_Weight: 1
+  - m_Path: Part1/cube_71
+    m_Weight: 1
+  - m_Path: Part1/cube_72
+    m_Weight: 1
+  - m_Path: Part1/cube_74
+    m_Weight: 1
+  - m_Path: Part1/cube_75
+    m_Weight: 1
+  - m_Path: Part1/cube_76
+    m_Weight: 1
+  - m_Path: Part1/cube_77
+    m_Weight: 1
+  - m_Path: Part1/cube_79
+    m_Weight: 1
+  - m_Path: Part1/cube_80
+    m_Weight: 1
+  - m_Path: Part1/cube_82
+    m_Weight: 1
+  - m_Path: Part1/cube_87
+    m_Weight: 1
+  - m_Path: Part1/cube_88
+    m_Weight: 1
+  - m_Path: Part1/cube_92
+    m_Weight: 1
+  - m_Path: Part1/cube_95
+    m_Weight: 1
+  - m_Path: Part1/cube_96
+    m_Weight: 1
+  - m_Path: Part1/cube_97
+    m_Weight: 1
+  - m_Path: Part1/cube_98
+    m_Weight: 1
+  - m_Path: Part1/cube_99
+    m_Weight: 1
+  - m_Path: Part1/cube_100
+    m_Weight: 1
+  - m_Path: Part1/cube_101
+    m_Weight: 1
+  - m_Path: Part1/cube_102
+    m_Weight: 1
+  - m_Path: Part1/cube_103
+    m_Weight: 1
+  - m_Path: Part1/cube_104
+    m_Weight: 1
+  - m_Path: Part1/cube_105
+    m_Weight: 1
+  - m_Path: Part1/cube_106
+    m_Weight: 1
+  - m_Path: Part1/cube_107
+    m_Weight: 1
+  - m_Path: Part1/cube_108
+    m_Weight: 1
+  - m_Path: Part1/cube_109
+    m_Weight: 1
+  - m_Path: Part1/cube_110
+    m_Weight: 1
+  - m_Path: Part1/cube_111
+    m_Weight: 1
+  - m_Path: Part1/cube_112
+    m_Weight: 1
+  - m_Path: Part1/cube_113
+    m_Weight: 1
+  - m_Path: Part1/cube_114
+    m_Weight: 1
+  - m_Path: Part1/Part12
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/cube_11
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger111
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger111/cube_16
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger111/finger112
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger111/finger112/cube_20
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger121
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger121/cube_13
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger121/finger122
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger121/finger122/cube_19
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger131
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger131/cube_15
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger131/finger132
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger131/finger132/cube_18
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger141
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger141/cube_14
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger141/finger142
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger141/finger142/cube_17
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger151
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger151/cube_21
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger151/finger152
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/finger151/finger152/cube_130
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/arm12/vz
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/arm11/cube_2
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm1/cube_5
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/cube_12
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger211
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger211/cube_23
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger211/finger212
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger211/finger212/cube_27
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger221
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger221/cube_24
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger221/finger222
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger221/finger222/cube_26
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger231
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger231/cube_132
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger231/finger232
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger231/finger232/cube_25
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger241
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger241/cube_29
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger241/finger242
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger241/finger242/cube_28
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger251
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger251/cube_22
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger251/finger252
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/arm22/finger251/finger252/cube_131
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/arm21/cube_3
+    m_Weight: 1
+  - m_Path: Part1/Part12/arm2/cube_6
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_7
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_69
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_70
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_78
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_81
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_83
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_84
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_85
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_86
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_89
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_90
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_91
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_93
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_94
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_115
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_116
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_117
+    m_Weight: 1
+  - m_Path: Part1/Part12/cube_118
+    m_Weight: 1
+  - m_Path: Part1/Part12/head
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_4
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_41
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_42
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_43
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_44
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_45
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_46
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_47
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_48
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_49
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_50
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_51
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_52
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_53
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_54
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_55
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_56
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_57
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_58
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_59
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_60
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/cube_73
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_30
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_31
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_32
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_33
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_34
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_35
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_36
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_37
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_38
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_39
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_40
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_61
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_62
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_63
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_64
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_65
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_66
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_119
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_120
+    m_Weight: 1
+  - m_Path: Part1/Part12/head/helmet/cube_121
+    m_Weight: 1
+  - m_Path: part2
+    m_Weight: 1
+  - m_Path: part2/cube_133
+    m_Weight: 1
+  - m_Path: part2/leg1
+    m_Weight: 1
+  - m_Path: part2/leg1/cube_9
+    m_Weight: 1
+  - m_Path: part2/leg1/leg12
+    m_Weight: 1
+  - m_Path: part2/leg1/leg12/cube_8
+    m_Weight: 1
+  - m_Path: part2/leg1/leg12/cube_126
+    m_Weight: 1
+  - m_Path: part2/leg1/leg12/cube_127
+    m_Weight: 1
+  - m_Path: part2/leg1/leg12/feet1
+    m_Weight: 1
+  - m_Path: part2/leg1/leg12/feet1/cube_122
+    m_Weight: 1
+  - m_Path: part2/leg1/leg12/feet1/cube_124
+    m_Weight: 1
+  - m_Path: part2/leg2
+    m_Weight: 1
+  - m_Path: part2/leg2/cube_10
+    m_Weight: 1
+  - m_Path: part2/leg2/leg21
+    m_Weight: 1
+  - m_Path: part2/leg2/leg21/cube
+    m_Weight: 1
+  - m_Path: part2/leg2/leg21/cube_128
+    m_Weight: 1
+  - m_Path: part2/leg2/leg21/cube_129
+    m_Weight: 1
+  - m_Path: part2/leg2/leg21/feet2
+    m_Weight: 1
+  - m_Path: part2/leg2/leg21/feet2/cube_123
+    m_Weight: 1
+  - m_Path: part2/leg2/leg21/feet2/cube_125
+    m_Weight: 1
