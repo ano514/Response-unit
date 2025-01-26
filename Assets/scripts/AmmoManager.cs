@@ -6,8 +6,10 @@ public class AmmoManager : MonoBehaviour
     private EquipmentManager manager;
     [SerializeField] private int primaryCurrentAmmo;
     [SerializeField] private int primaryCurrentAmmoStorage;
-    [SerializeField] private int secondariCurrentAmmo;
-    [SerializeField] private int secondariCurrentAmmoStorage;
+    [SerializeField] private int secondaryCurrentAmmo;
+    [SerializeField] private int secondaryCurrentAmmoStorage;
+    [SerializeField] private bool primaryMagazineIsEmpty=true;
+    [SerializeField] private bool secondaryMagazineIsEmpty = true;
     private void Start()
     {
         Reference();
@@ -31,19 +33,42 @@ public class AmmoManager : MonoBehaviour
     {
         if (slot == 0)
         {
-            primaryCurrentAmmo -= currentAmmoUsed;
-            primaryCurrentAmmoStorage -= currentStoredAmmoUsed;
+            if (primaryCurrentAmmo <= 0)
+            {
+                primaryMagazineIsEmpty = true;
+            }
+            else
+            {
+                primaryCurrentAmmo -= currentAmmoUsed;
+                primaryCurrentAmmoStorage -= currentStoredAmmoUsed;
+            }
         }
         if (slot == 1)
         {
-            secondariCurrentAmmo -= currentAmmoUsed;
-            secondariCurrentAmmoStorage -= currentStoredAmmoUsed;
+            if (secondaryCurrentAmmo <= 0)
+            {
+                secondaryMagazineIsEmpty = true;
+            }
+            else
+            {
+                secondaryCurrentAmmo -= currentAmmoUsed;
+                secondaryCurrentAmmoStorage -= currentStoredAmmoUsed;
+            }
         }
     }
     private void Reference()
     {
         inventory = GetComponent<Inventory>();
         manager = GetComponentInChildren<EquipmentManager>();
+    }
+
+    public bool getprimaryMagazineIsEmpty()
+    {
+        return primaryMagazineIsEmpty;
+    }
+    public bool getsecondaryMagazineIsEmpty()
+    {
+        return secondaryMagazineIsEmpty;
     }
 
 }

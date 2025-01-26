@@ -8,6 +8,8 @@ public class BulletSpawner : MonoBehaviour
     private EquipmentManager manager;
     private AmmoManager managerAmmo;
     private float lastShootTime = 0;
+    private bool canShoot;
+
 
     [SerializeField] private int CurrentAmmo;
     [SerializeField] private int CurrentAmmoStorage;
@@ -51,16 +53,26 @@ public class BulletSpawner : MonoBehaviour
 
     private void Shoot()
     {
-        weapon currentWeapon = inventory.GetItem(manager.current);
-
-        if(Time.time > lastShootTime+currentWeapon.fireRate)
+        if (managerAmmo.getprimaryMagazineIsEmpty())
+            canShoot = false;
+        if(managerAmmo.getsecondaryMagazineIsEmpty())
+            canShoot = false;
+        if (canShoot)
         {
-            Debug.Log("Shoot");
-            lastShootTime= Time.time;
+            weapon currentWeapon = inventory.GetItem(manager.current);
 
-            RaycastShoot(currentWeapon);
-            managerAmmo.UseAmmo((int)currentWeapon.weaponstyle, 1, 0);
+            if (Time.time > lastShootTime + currentWeapon.fireRate)
+            {
+                Debug.Log("Shoot");
+                lastShootTime = Time.time;
+
+                RaycastShoot(currentWeapon);
+                managerAmmo.UseAmmo((int)currentWeapon.weaponstyle, 1, 0);
+            }
         }
+        else
+            Debug.Log("Naser si nemas naboje preby dopukla");
+        
     }
 
     private void Reference()
