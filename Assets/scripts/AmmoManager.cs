@@ -4,27 +4,31 @@ public class AmmoManager : MonoBehaviour
 {
     private Inventory inventory;
     private EquipmentManager manager;
+    private BulletSpawner spawner;
     [SerializeField] private int primaryCurrentAmmo;
     [SerializeField] private int primaryCurrentAmmoStorage;
     [SerializeField] private int secondaryCurrentAmmo;
     [SerializeField] private int secondaryCurrentAmmoStorage;
-    [SerializeField] private bool primaryMagazineIsEmpty=true;
-    [SerializeField] private bool secondaryMagazineIsEmpty = true;
+    [SerializeField] private bool primaryMagazineIsEmpty=false;
+    [SerializeField] private bool secondaryMagazineIsEmpty =false;
     private void Start()
     {
         Reference();
     }
     public void InitAmmo(int slot, weapon Weapon)
     {
+        Debug.Log((int)Weapon.weaponstyle);
         if (slot == 0)
         {
-            primaryCurrentAmmo = Weapon.magdazineSize;
-            primaryCurrentAmmoStorage = Weapon.magdazineSize * Weapon.magazineCount;
+            Debug.Log("Mozem pridat naboje");
+            primaryCurrentAmmo = (int)Weapon.magdazineSize;
+            primaryCurrentAmmoStorage = (int)Weapon.magdazineSize * (int)Weapon.magazineCount;
         }
         if (slot == 1)
         {
-            secondariCurrentAmmo = Weapon.magdazineSize;
-            secondariCurrentAmmoStorage = Weapon.magdazineSize * Weapon.magazineCount;
+            Debug.Log("Mozem pridat naboje");
+            secondaryCurrentAmmo = (int)Weapon.magdazineSize;
+            secondaryCurrentAmmoStorage = (int)Weapon.magdazineSize * (int)Weapon.magazineCount;
         }
 
 
@@ -36,6 +40,7 @@ public class AmmoManager : MonoBehaviour
             if (primaryCurrentAmmo <= 0)
             {
                 primaryMagazineIsEmpty = true;
+                spawner.CheckCanShoot(manager.current);
             }
             else
             {
@@ -48,6 +53,7 @@ public class AmmoManager : MonoBehaviour
             if (secondaryCurrentAmmo <= 0)
             {
                 secondaryMagazineIsEmpty = true;
+                spawner.CheckCanShoot(manager.current);
             }
             else
             {
@@ -56,10 +62,39 @@ public class AmmoManager : MonoBehaviour
             }
         }
     }
+    public void Reload(int slot)
+    {
+        if (slot == 0)
+        {
+            if (primaryCurrentAmmoStorage >= inventory.GetItem(0).magdazineSize)
+           {   
+            if (primaryCurrentAmmo == inventory.GetItem(0).magdazineSize)
+                Debug.Log("Si debil strelaj mas plne");
+            primaryCurrentAmmoStorage -= (inventory.GetItem(0).magdazineSize-primaryCurrentAmmo);
+            primaryCurrentAmmo = inventory.GetItem(0).magdazineSize;
+
+            primaryMagazineIsEmpty=false;
+                spawner.CheckCanShoot(slot);
+            }
+        }
+        if (slot == 1)
+        {
+            if (secondaryCurrentAmmoStorage >= inventory.GetItem(0).magdazineSize)
+            {
+                if (secondaryCurrentAmmo == inventory.GetItem(0).magdazineSize)
+                    Debug.Log("Si debil strelaj mas plne");
+                secondaryCurrentAmmoStorage -= (inventory.GetItem(1).magdazineSize - secondaryCurrentAmmo);
+                secondaryCurrentAmmo = inventory.GetItem(1).magdazineSize;
+                secondaryMagazineIsEmpty = false;
+                spawner.CheckCanShoot(slot);
+            }
+        }
+    }
     private void Reference()
     {
         inventory = GetComponent<Inventory>();
-        manager = GetComponentInChildren<EquipmentManager>();
+        manager = GetComponent<EquipmentManager>();
+        spawner = GetComponentInChildren<BulletSpawner>();
     }
 
     public bool getprimaryMagazineIsEmpty()
@@ -69,6 +104,22 @@ public class AmmoManager : MonoBehaviour
     public bool getsecondaryMagazineIsEmpty()
     {
         return secondaryMagazineIsEmpty;
+    }
+    public void setprimaryCurrentAmmo (int value)
+    {
+        primaryCurrentAmmo = value;
+    }
+    public void setprimaryCurrentAmmoStorage(int value)
+    {
+        primaryCurrentAmmoStorage = value;
+    }
+    public void setsecodnaryCurrentAmmo(int value)
+    {
+        secondaryCurrentAmmo = value;
+    }
+    public void setsecondaryCurrentAmmoStorage(int value)
+    {
+        secondaryCurrentAmmoStorage = value;
     }
 
 }

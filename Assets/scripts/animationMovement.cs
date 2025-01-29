@@ -18,9 +18,13 @@ public class animationMovement : MonoBehaviour
         bool Ide = animator.GetBool("Ide?");
         bool Idedozadu = animator.GetBool("Idedozadu?");
         bool Side = animator.GetBool("Side?");
+        bool SideBack = animator.GetBool("Sidedozadu?");
+        bool aim = animator.GetBool("aim");
         bool fowardPressed = Input.GetKey("w");
         bool backPressed = Input.GetKey ("s");
         bool sidePressed = Input.GetKey("d");
+        bool sideBackPressed= Input.GetKey("a");
+        bool aimPressed = Input.GetKey(KeyCode.Mouse1);
         if (!Ide && fowardPressed)
         {
             animator.SetBool("Ide?",true);
@@ -44,6 +48,22 @@ public class animationMovement : MonoBehaviour
         if (Side && !sidePressed)
         {
             animator.SetBool("Side?", false);
+        }
+        if ( !SideBack && sideBackPressed)
+        {
+            animator.SetBool("Sidedozadu?", true);
+        }
+        if (SideBack && !sideBackPressed)
+        {
+            animator.SetBool("Sidedozadu?", false);
+        }
+        if (!aim && aimPressed)
+        {
+            animator.SetBool("aim", true);
+        }
+        if (aim && !aimPressed)
+        {
+            animator.SetBool("aim", false);
         }
     }
 }

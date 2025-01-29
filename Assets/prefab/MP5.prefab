@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunTip: {fileID: 1682234428016194592}
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  CurrentAmmo: 0
+  CurrentAmmoStorage: 0
+  BulletTrial: {fileID: 411598687742242713, guid: 7b7a4479852fbc3479cbe62dc7e21026, type: 3}
 --- !u!4 &6507734632820218942 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3500460014136483016, guid: e4823bee9bacc8a4aac4b7b2edece66c, type: 3}

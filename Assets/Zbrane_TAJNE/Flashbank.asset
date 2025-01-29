@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c09de4b452c58409630718559db632, type: 3}
+  m_Name: Flashbank
+  m_EditorClassIdentifier: 
+  name: FlashBank
+  description: 
+  icon: {fileID: 0}
+  prefab: {fileID: 4093786152857602729, guid: 59ae4633ad5575d4babd0d70df4aea51, type: 3}
+  amount: 3
+  duration: 0.5
+  radius: 0.7
+  durationtoexplode: 0.2

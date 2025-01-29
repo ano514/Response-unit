@@ -20,6 +20,7 @@ MonoBehaviour:
   magazineCount: 6
   range: 15
   fireRate: 0.25
+  spread: 0.1
   damage: 35
   type: 0
   weaponstyle: 1

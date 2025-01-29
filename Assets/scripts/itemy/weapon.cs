@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "new Weapon", menuName ="Items/weapons")]
+[CreateAssetMenu(fileName = "new Weapon", menuName ="weapons")]
 public class weapon : Item
 {
     public GameObject prefab;
@@ -8,14 +8,15 @@ public class weapon : Item
     public int magazineCount;
     public float range;
     public float fireRate;
+    public float spread;
     public int damage;
     public WeaponType type;
     public WeaponStyle weaponstyle;
     public FireMode firemode;
 }
 
-public enum WeaponType { Pistol, AR, SMG, Shotgun, Flashbang}
+public enum WeaponType { Pistol, AR, SMG, Shotgun}
 
-public enum WeaponStyle { Primary, Secondary, Gagadget1 }
+public enum WeaponStyle { Primary, Secondary}
 
 public enum FireMode  { SemiAuto, Auto };

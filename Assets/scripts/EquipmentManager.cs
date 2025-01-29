@@ -8,6 +8,7 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private Transform GunHolder = null;
     private Animator anim;
     private Inventory inventory;
+    private BulletSpawner bulletSpawner;
 
     [SerializeField] weapon deafultWeapon = null;
     private void Start()
@@ -44,6 +45,7 @@ public class EquipmentManager : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         inventory = GetComponent<Inventory>();
+        bulletSpawner = GetComponent<BulletSpawner>();
     }
 
   
