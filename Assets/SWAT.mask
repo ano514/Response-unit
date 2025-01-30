@@ -6,13 +6,13 @@ AvatarMask:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SWATavatarmak
-  m_Mask: 01000000000000000000000001000000010000000000000000000000000000000000000001000000010000000000000000000000
+  m_Name: SWAT
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   m_Elements:
   - m_Path: 
     m_Weight: 1
   - m_Path: Part1
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Part1/cube_1
     m_Weight: 1
   - m_Path: Part1/cube_67
@@ -316,7 +316,7 @@ AvatarMask:
   - m_Path: Part1/Part12/head/helmet/cube_121
     m_Weight: 1
   - m_Path: part2
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: part2/cube_133
     m_Weight: 1
   - m_Path: part2/leg1

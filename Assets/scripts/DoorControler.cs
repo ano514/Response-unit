@@ -10,11 +10,22 @@ public class DoorControler : MonoBehaviour
         if(other.tag == "door")
         {
             Animator animator = other.GetComponentInChildren<Animator>();
-            if (Input.GetKeyDown(KeyCode.F) && open==true)
+            if ( open==true)
             {
-                animator.SetTrigger("OpenClose");
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    if (animator.GetBool("Opened"))
+                    {
+                        animator.SetBool("Opened", false);
+                    }
+                    if (!animator.GetBool("Opened"))
+                    {
+                        animator.SetBool("Opened", true);
+                    } 
+                    Debug.Log(animator.GetBool("Opened"));
+                }
             }
-            else
+            if(Input.GetKeyDown(KeyCode.F) && open==false)
             {
                 animator.SetTrigger("Closed");
             }
@@ -22,9 +33,10 @@ public class DoorControler : MonoBehaviour
             {
                 if (cislo == 3)
                 {
-                    animator.SetTrigger("Bruce");
                     cislo = 0;
                     open= true;
+                    animator.SetBool("Opened", true);
+
                 }
                 else
                 {

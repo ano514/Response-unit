@@ -69,7 +69,7 @@ public class BulletSpawner : MonoBehaviour
 
         Vector3 direction = Direction(spread);
 
-        if (Physics.Raycast(gunTip.position, direction, out hit, currentWeaponRange))
+        if (Physics.Raycast(gunTip.position, direction, out hit))
         {
             TrailRenderer trail = Instantiate(BulletTrial, gunTip.position, Quaternion.identity);
             StartCoroutine(SpawnTrail(trail, hit));
