@@ -5,7 +5,9 @@ public class EquipmentManager : MonoBehaviour
 
     public int current = 2;
     public GameObject currentGun = null;
+    public GameObject inventoriGun = null;
     [SerializeField] private Transform GunHolder = null;
+    [SerializeField] private Transform GunInventory = null;
     private Animator anim;
     private Inventory inventory;
     private BulletSpawner bulletSpawner;
@@ -54,10 +56,12 @@ public class EquipmentManager : MonoBehaviour
         current = (int)Weapon.weaponstyle;
         anim.SetInteger("Typ", (int)Weapon.type);
         currentGun=Instantiate(Weapon.prefab, GunHolder);
+        inventoriGun= Instantiate(Weapon.prefab, GunInventory);
     }
      private void UnequipWeapon()
     {
         anim.SetTrigger("Prepnut");
         Destroy(currentGun);
+        Destroy(inventoriGun);
     }
 }
