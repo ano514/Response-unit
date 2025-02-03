@@ -4,7 +4,6 @@ using UnityEngine;
 public class PatrolState : BaseState
 {
     public int waypointIndex;
-    private Animator anim;
     public override void Enter()
     {
         
@@ -18,6 +17,10 @@ public class PatrolState : BaseState
     public override void Perfomr()
     {
         PatrolCycle();
+        if (enemy.CanSeePlayer())
+        {
+            stateMachine.ChangeState(new AttackState());
+        }
     }
     
     public void PatrolCycle()
@@ -32,8 +35,9 @@ public class PatrolState : BaseState
             {
                 waypointIndex = 0;
             }
+            enemy.anim.SetBool("GO?",true);
             enemy.Agent.SetDestination(enemy.path.waypoints[waypointIndex].position);
-
+            enemy.anim.SetBool("GO?", false);
         }
     }
 }

@@ -52,7 +52,7 @@ public class BulletSpawnerEnemy : MonoBehaviour
         }
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         if (canShoot)
         {
@@ -71,7 +71,7 @@ public class BulletSpawnerEnemy : MonoBehaviour
 
     private void Reference()
     {
-        Terorist = GetComponent<Terorist>();
+        Terorist = GetComponentInParent<Terorist>();
 
     }
 

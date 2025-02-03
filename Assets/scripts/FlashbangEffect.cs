@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEditor.Rendering;
-using Unity.VisualScripting;
 using UnityEngine.Rendering;
 
 public class FlashbangEffect : MonoBehaviour
