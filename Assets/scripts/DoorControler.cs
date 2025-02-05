@@ -4,30 +4,36 @@ public class DoorControler : MonoBehaviour
 {
     public bool open =false;
     private int cislo = 0;
+    private Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponentInChildren<Animator>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "door")
+        if(other.tag == "Player")
         {
-            Animator animator = other.GetComponentInChildren<Animator>();
             if ( open==true)
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    if (animator.GetBool("Opened"))
+                    if (anim.GetBool("Opened"))
                     {
-                        animator.SetBool("Opened", false);
+                        anim.SetBool("Opened", false);
                     }
-                    if (!animator.GetBool("Opened"))
+                    if (!anim.GetBool("Opened"))
                     {
-                        animator.SetBool("Opened", true);
+                        anim.SetBool("Opened", true);
                     } 
-                    Debug.Log(animator.GetBool("Opened"));
+                    Debug.Log(anim.GetBool("Opened"));
                 }
             }
             if(Input.GetKeyDown(KeyCode.F) && open==false)
             {
-                animator.SetTrigger("Closed");
+                anim.SetTrigger("Closed");
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -35,7 +41,7 @@ public class DoorControler : MonoBehaviour
                 {
                     cislo = 0;
                     open= true;
-                    animator.SetBool("Opened", true);
+                    anim.SetBool("Opened", true);
 
                 }
                 else

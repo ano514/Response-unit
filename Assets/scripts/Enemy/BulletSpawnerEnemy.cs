@@ -24,11 +24,6 @@ public class BulletSpawnerEnemy : MonoBehaviour
     private void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Shoot();
-        }
-
     }
 
     private void RaycastShoot(weapon Weapon)

@@ -5,6 +5,7 @@ public class ProgressBar1 : MonoBehaviour
 {
     private int baseVaule;
     private int maxVaule;
+    
     [SerializeField] private Image fill;
 
 

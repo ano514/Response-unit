@@ -16,7 +16,8 @@ public class Enemy : MonoBehaviour
     public float sightDistance = 20f;
     public float fieldOfView = 85f;
     public float eyeHeight;
-    public BulletSpawnerEnemy sp;
+    private BulletSpawnerEnemy sp;
+    public BulletSpawnerEnemy Sp { get => sp; }
     // Start is called once beffre the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,6 +31,10 @@ public class Enemy : MonoBehaviour
     {
         CanSeePlayer();
         currentState = stateMachine.activeState.ToString();
+        if (sp == null)
+        {
+            sp = GetComponentInChildren<BulletSpawnerEnemy>();
+        }
         
     }
     private void References()
@@ -37,7 +42,6 @@ public class Enemy : MonoBehaviour
         stateMachine = GetComponent<StateMachine>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
-        sp = GetComponentInChildren<BulletSpawnerEnemy>();
         anim = GetComponentInChildren<Animator>();
     }
     public bool CanSeePlayer()
@@ -50,7 +54,7 @@ public class Enemy : MonoBehaviour
                 float angleToPlayer = Vector3.Angle(targetDiregtion,transform.position);
                 if (angleToPlayer >= - fieldOfView && angleToPlayer <= fieldOfView)
                 {
-                    Ray ray = new Ray(transform.position+ (Vector3.up * eyeHeight), targetDiregtion);
+                    Ray ray = new Ray(transform.position + (Vector3.up * eyeHeight), targetDiregtion);
                     RaycastHit hitInfo = new RaycastHit();
                     if (Physics.Raycast(ray, out hitInfo, sightDistance))
                     {
@@ -60,6 +64,8 @@ public class Enemy : MonoBehaviour
                             Debug.DrawRay(ray.origin, ray.direction * sightDistance);
                             return true;
                         }
+                       
+                        
                     }
                 }
             }

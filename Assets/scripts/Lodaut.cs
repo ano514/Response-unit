@@ -12,8 +12,15 @@ public class Lodaut : MonoBehaviour
     void Start()
     {
         Reference();
-        lodaut();
 
+
+    }
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.L))
+        {
+            lodaut();
+        }
     }
 
     private void Reference()

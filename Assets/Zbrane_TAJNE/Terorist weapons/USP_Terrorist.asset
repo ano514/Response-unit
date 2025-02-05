@@ -23,5 +23,5 @@ MonoBehaviour:
   spread: 0.08
   damage: 27
   type: 0
-  weaponstyle: 1
+  weaponstyle: 0
   firemode: 0

@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - door
+  - Enemy
   - WhiteImage
+  - WhiteSound
+  - Bang
   layers:
   - Default
   - TransparentFX

@@ -22,7 +22,7 @@ public class AttackState : BaseState
             losePlayerTimer = 0;
             moveTimer += Time.deltaTime;
             enemy.transform.LookAt(enemy.Player.transform);
-            enemy.sp.Shoot(); 
+            enemy.Sp.Shoot(); 
             if (moveTimer > Random.Range(3, 7))
             {
                 enemy.Agent.SetDestination(enemy.transform.position + (Random.insideUnitSphere * 5));
