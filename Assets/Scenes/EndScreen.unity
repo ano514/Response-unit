@@ -2551,6 +2551,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c86c7a83272252438e9a2eb03a75a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CivilArr: {fileID: 1114019737}
+  CivilDead: {fileID: 1087699090}
+  EnemArr: {fileID: 218737625}
+  EnemDead: {fileID: 1559733229}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

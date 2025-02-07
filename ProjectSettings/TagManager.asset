@@ -9,6 +9,7 @@ TagManager:
   - WhiteImage
   - WhiteSound
   - Bang
+  - Civil
   layers:
   - Default
   - TransparentFX

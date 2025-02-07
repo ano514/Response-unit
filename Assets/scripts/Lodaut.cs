@@ -6,7 +6,7 @@ public class Lodaut : MonoBehaviour
     private EquipmentManager equipmentManager;
     [SerializeField] public weapon weaponPrimary;
     [SerializeField] public weapon weaponSecondary;
-    [SerializeField] public Flashbank flashbank;
+    [SerializeField] public weapon flashbank;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,7 +17,7 @@ public class Lodaut : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.L))
+        if (inventory.GetItem(0)==null)
         {
             lodaut();
         }
@@ -30,8 +30,9 @@ public class Lodaut : MonoBehaviour
     }
     public void lodaut()
     {
-        inventory.AddItem(weaponPrimary);
-        inventory.AddItem(weaponSecondary);
-        inventory.AddFlashbank(flashbank);
+        inventory.AddItem(LodautSaver.Primary);
+        inventory.AddItem(LodautSaver.Secondary);
+        inventory.AddItem(flashbank);
+        equipmentManager.EquipWeapon(inventory.GetItem(0));
     }
 }

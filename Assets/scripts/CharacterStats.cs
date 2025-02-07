@@ -7,10 +7,13 @@ public class CharacterStats : MonoBehaviour
     [SerializeField] protected int Shield;
     [SerializeField] protected int MaxShield;
     [SerializeField] protected bool isDead;
+    [SerializeField] protected int health;
+    [SerializeField] protected int shield;
+
 
     private void Start()
     {
-        InitVariables();
+        InitVariables(health,shield);
     }
     public virtual void CheckHealth()
     {
@@ -62,10 +65,10 @@ public class CharacterStats : MonoBehaviour
             SetShieldTo(ShieldAfterDamage);
         }
     }
-    public void InitVariables()
+    public void InitVariables(int health,int shield)
     {
-        MaxHealth = 100;
-        MaxShield = 50;
+        MaxHealth = health;
+        MaxShield = shield;
         SetHealthTo(MaxHealth);
         SetShieldTo(MaxShield);
         isDead = false;

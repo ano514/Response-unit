@@ -51,7 +51,7 @@ public class EquipmentManager : MonoBehaviour
     }
 
   
-    private void EquipWeapon(weapon Weapon)
+    public void EquipWeapon(weapon Weapon)
     {
         current = (int)Weapon.weaponstyle;
         anim.SetInteger("Typ", (int)Weapon.type);

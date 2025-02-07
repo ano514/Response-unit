@@ -15,8 +15,8 @@ public class weapon : Item
     public FireMode firemode;
 }
 
-public enum WeaponType { Pistol, AR, SMG, Shotgun}
+public enum WeaponType { Pistol, AR, SMG, Shotgun,}
 
-public enum WeaponStyle { Primary, Secondary}
+public enum WeaponStyle { Primary, Secondary, Gadget}
 
 public enum FireMode  { SemiAuto, Auto };

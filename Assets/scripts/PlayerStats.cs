@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : CharacterStats
 {
@@ -6,7 +7,7 @@ public class PlayerStats : CharacterStats
     private void Start()
     {
         References();
-        InitVariables();
+        InitVariables(health,shield);
     }
 
     private void References()
@@ -28,9 +29,9 @@ public class PlayerStats : CharacterStats
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.T))
+        if (isDead)
         {
-            TakeDamage(10);
+            SceneManager.LoadScene("DeadScreen");  
         }
     }
 }

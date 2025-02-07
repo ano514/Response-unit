@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Terorist : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Terorist : MonoBehaviour
     private GameObject Current;
     private Animator anim;
     private BulletSpawnerEnemy spawner;
+    private NavMeshAgent agent;
+    private bool flash = false;
+    private float flashdelay = 5f;
     public bool MagazineIsEmpty = false;
     private void Start()
     {
@@ -21,6 +25,16 @@ public class Terorist : MonoBehaviour
         {
             Reload();
         }
+        if (flash==true)
+        {
+            flashdelay -= Time.deltaTime;
+            if(flashdelay <= 0)
+            {
+                flash = false;
+                flashdelay = 5f;
+                agent.isStopped = false;
+            }
+        }
 
     }
     private void EquipWeapon(weapon Weapon)
@@ -32,6 +46,7 @@ public class Terorist : MonoBehaviour
     {
         anim = GetComponentInChildren<Animator>();
         spawner = GetComponent<BulletSpawnerEnemy>();
+        agent = GetComponent<NavMeshAgent>();
     }
     private void Deafaultweapon(weapon Weapon)
         {
@@ -65,6 +80,26 @@ public class Terorist : MonoBehaviour
     public weapon getDeafaultWeapon()
     {
         return deafultWeapon;
+    }
+    public void Surender()
+    {
+        agent.Stop();
+        anim.SetBool("Surender",true);
+    }
+    public void Arrest()
+    {
+        if (anim.GetBool("Surender"))
+        {
+            anim.SetBool("Surender", false);
+            anim.SetBool("Arrest",true );
+            PointSystem.EnemyArrestAddPoint(1);
+        }
+    }
+    public void Flash()
+    {
+        agent.Stop();
+
+        flash = true;
     }
 
 }

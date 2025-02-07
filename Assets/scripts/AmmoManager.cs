@@ -5,6 +5,7 @@ public class AmmoManager : MonoBehaviour
     private Inventory inventory;
     private EquipmentManager manager;
     private BulletSpawner spawner;
+    private ShowAmmo ammo;
     [SerializeField] private int primaryCurrentAmmo;
     [SerializeField] private int primaryCurrentAmmoStorage;
     [SerializeField] private int secondaryCurrentAmmo;
@@ -46,6 +47,7 @@ public class AmmoManager : MonoBehaviour
             {
                 primaryCurrentAmmo -= currentAmmoUsed;
                 primaryCurrentAmmoStorage -= currentStoredAmmoUsed;
+                ammo.UpdateAmmoUI(primaryCurrentAmmo, primaryCurrentAmmoStorage);
             }
         }
         if (slot == 1)
@@ -59,6 +61,7 @@ public class AmmoManager : MonoBehaviour
             {
                 secondaryCurrentAmmo -= currentAmmoUsed;
                 secondaryCurrentAmmoStorage -= currentStoredAmmoUsed;
+                ammo.UpdateAmmoUI(secondaryCurrentAmmo, secondaryCurrentAmmoStorage);
             }
         }
     }
@@ -72,7 +75,7 @@ public class AmmoManager : MonoBehaviour
                 Debug.Log("Si debil strelaj mas plne");
             primaryCurrentAmmoStorage -= (inventory.GetItem(0).magdazineSize-primaryCurrentAmmo);
             primaryCurrentAmmo = inventory.GetItem(0).magdazineSize;
-
+                ammo.UpdateAmmoUI(primaryCurrentAmmo, primaryCurrentAmmoStorage);
             primaryMagazineIsEmpty=false;
                 spawner.CheckCanShoot(slot);
             }
@@ -85,6 +88,7 @@ public class AmmoManager : MonoBehaviour
                     Debug.Log("Si debil strelaj mas plne");
                 secondaryCurrentAmmoStorage -= (inventory.GetItem(1).magdazineSize - secondaryCurrentAmmo);
                 secondaryCurrentAmmo = inventory.GetItem(1).magdazineSize;
+                ammo.UpdateAmmoUI(secondaryCurrentAmmo, secondaryCurrentAmmoStorage);
                 secondaryMagazineIsEmpty = false;
                 spawner.CheckCanShoot(slot);
             }
@@ -95,6 +99,7 @@ public class AmmoManager : MonoBehaviour
         inventory = GetComponent<Inventory>();
         manager = GetComponent<EquipmentManager>();
         spawner = GetComponentInChildren<BulletSpawner>();
+        ammo = GetComponent<ShowAmmo>();
     }
 
     public bool getprimaryMagazineIsEmpty()

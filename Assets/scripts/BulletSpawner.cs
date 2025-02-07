@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class BulletSpawner : MonoBehaviour
@@ -14,10 +15,11 @@ public class BulletSpawner : MonoBehaviour
     private bool canShoot;
     private bool aim = false;
 
-
+    [SerializeField] private Mask mask;
     [SerializeField] private int CurrentAmmo;
     [SerializeField] private int CurrentAmmoStorage;
     [SerializeField] private TrailRenderer BulletTrial;
+
     private void Start()
     {
         Reference();
@@ -74,7 +76,16 @@ public class BulletSpawner : MonoBehaviour
             TrailRenderer trail = Instantiate(BulletTrial, gunTip.position, Quaternion.identity);
             StartCoroutine(SpawnTrail(trail, hit));
             Debug.Log("Hit: " + hit.collider.name);
-            Debug.DrawRay(gunTip.position, direction, Color.green);
+            if (hit.collider.tag == "Enemy")
+            {
+                CharacterStats enemyStats = hit.collider.GetComponent<CharacterStats>();
+                enemyStats.TakeDamage(currentWeapon.damage);
+            }
+            if (hit.collider.tag == "Civil")
+            {
+                CharacterStats civilStats = hit.collider.GetComponent<CharacterStats>();
+                civilStats.TakeDamage(currentWeapon.damage);
+            }
         }
     }
 

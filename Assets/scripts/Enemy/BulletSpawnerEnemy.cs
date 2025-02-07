@@ -40,9 +40,15 @@ public class BulletSpawnerEnemy : MonoBehaviour
         {
             TrailRenderer trail = Instantiate(BulletTrial, gunTip.position, Quaternion.identity);
             StartCoroutine(SpawnTrail(trail, hit));
-            if (Physics.Raycast(gunTip.position, direction, out hit,500))
+            if (hit.collider.tag == "Player")
             {
-
+                CharacterStats playerStats = hit.collider.GetComponent<CharacterStats>();
+                playerStats.TakeDamage(Weapon.damage);
+            }
+            if (hit.collider.tag == "Civil")
+            {
+                CharacterStats civilStats = hit.collider.GetComponent<CharacterStats>();
+                civilStats.TakeDamage(Weapon.damage);
             }
         }
     }

@@ -26,10 +26,7 @@ public class Inventory : MonoBehaviour
          ammoManager.InitAmmo((int)newItem.weaponstyle, newItem);
         }
 
-    public void AddFlashbank(Flashbank flashbank)
-    {
-        flashbanks[0]= flashbank;
-    }
+   
 
     public weapon GetItem(int index)
     {
@@ -43,8 +40,8 @@ public class Inventory : MonoBehaviour
 
     private void InitVariables()
     {
-        weaponsAndGadetch = new weapon[2];
-        flashbanks = new Flashbank[1];
+        weaponsAndGadetch = new weapon[3];
+
     }
     private void Refrences()
     {

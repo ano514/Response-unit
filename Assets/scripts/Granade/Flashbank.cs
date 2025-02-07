@@ -7,6 +7,5 @@ public class Flashbank : Item
     public int amount;
     public float duration;
     public float radius;
-    public float durationtoexplode;
 
 }

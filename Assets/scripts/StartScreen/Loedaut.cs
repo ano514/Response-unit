@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class Loedaut : MonoBehaviour
 {
-    private weapon Primary;
-    private weapon Secondary;
+    public weapon Primary1;
+    public weapon Primary2;
+    public weapon Secondary1;
+    public weapon Secondary2;
     public GameObject lodautScreen;
     public GameObject startScreen;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,10 +24,23 @@ public class Loedaut : MonoBehaviour
     {
         if (val == 0)
         {
+            LodautSaver.Primary = Primary1;
+        }
+        else if (val == 1)
+        {
+            LodautSaver.Primary = Primary2;
         }
     }
     public void DropdownSecondary(int val)
     {
+        if(val == 0)
+        {
+            LodautSaver.Secondary = Secondary1;
+        }
+        if (val == 1)
+        {
+            LodautSaver.Secondary = Secondary2;
+        }
 
     }
     public void OpenLodaut()
