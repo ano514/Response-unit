@@ -25,35 +25,35 @@ public class animationMovement : MonoBehaviour
         bool sidePressed = Input.GetKey("d");
         bool sideBackPressed= Input.GetKey("a");
         bool aimPressed = Input.GetKey(KeyCode.Mouse1);
-        if (!Ide && fowardPressed)
+        if (!Ide && fowardPressed && !backPressed && !sidePressed && !sideBackPressed)
         {
             animator.SetBool("Ide?",true);
         }
-        if (Ide &&!fowardPressed)
+        if (Ide &&!fowardPressed|| Ide && fowardPressed && backPressed || Ide && fowardPressed && sidePressed || Ide && fowardPressed && sideBackPressed)
         {
             animator.SetBool("Ide?", false);
         }
-        if (!Idedozadu && backPressed)
+        if (!Idedozadu && backPressed && !fowardPressed && !sidePressed && !sideBackPressed)
         {
             animator.SetBool("Idedozadu?", true);
         }
-        if (Idedozadu && !backPressed)
+        if (Idedozadu && !backPressed || Idedozadu && backPressed && fowardPressed || Idedozadu && backPressed && sidePressed || Idedozadu && backPressed && sideBackPressed)
         {
             animator.SetBool("Idedozadu?", false);
         }
-        if (!Side && sidePressed)
+        if (!Side && sidePressed && !backPressed && !fowardPressed && !sideBackPressed)
         {
             animator.SetBool("Side?", true);
         }
-        if (Side && !sidePressed)
+        if (Side && !sidePressed || Side && sidePressed &&fowardPressed || Side && sidePressed && backPressed || Side && sidePressed && sideBackPressed)
         {
             animator.SetBool("Side?", false);
         }
-        if ( !SideBack && sideBackPressed)
+        if ( !SideBack && sideBackPressed && !backPressed && !fowardPressed && !sidePressed)
         {
             animator.SetBool("Sidedozadu?", true);
         }
-        if (SideBack && !sideBackPressed)
+        if (SideBack && !sideBackPressed || SideBack && sideBackPressed && fowardPressed || SideBack && sideBackPressed && backPressed || SideBack && sideBackPressed && sidePressed)
         {
             animator.SetBool("Sidedozadu?", false);
         }

@@ -30,8 +30,16 @@ public class Lodaut : MonoBehaviour
     }
     public void lodaut()
     {
-        inventory.AddItem(LodautSaver.Primary);
-        inventory.AddItem(LodautSaver.Secondary);
+        if (LodautSaver.Primary != null && LodautSaver.Secondary != null)
+        {
+            inventory.AddItem(LodautSaver.Primary);
+            inventory.AddItem(LodautSaver.Secondary);
+        }
+        else
+        {
+            inventory.AddItem(weaponPrimary);
+            inventory.AddItem(weaponSecondary);
+        }
         inventory.AddItem(flashbank);
         equipmentManager.EquipWeapon(inventory.GetItem(0));
     }

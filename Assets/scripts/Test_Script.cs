@@ -4,6 +4,9 @@ public class Test_Script : MonoBehaviour
 {
     private Animator anim;
     private float speed=0;
+    private float maxAngle = 45f;
+   public Transform gun; 
+    public Camera mainCamera;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
@@ -13,6 +16,7 @@ public class Test_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
         {
             speed += 5;
@@ -23,4 +27,7 @@ public class Test_Script : MonoBehaviour
         }
         anim.SetFloat("Direction", speed);
     }
+
+   
+
 }

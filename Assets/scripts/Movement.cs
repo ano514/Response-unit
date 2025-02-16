@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
         bool back = false;
         bool right = false;
         bool left = false;
-        if (!foward && fowardPressed)
+        if (!foward && fowardPressed&& !backPressed && !rightPressed && !leftPressed)
         {
             transform.position += transform.TransformDirection(Vector3.forward) * Time.deltaTime * movementSpeed * 2.5f;
             foward = true;
@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
             foward=false;
         }
 
-        if(!back && backPressed)
+        if(!back && backPressed && !fowardPressed && !rightPressed && !leftPressed)
         {
             transform.position -= transform.TransformDirection(Vector3.forward) * Time.deltaTime * movementSpeed * 2.5f;
             back = true;
@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
         {
             back = false;
         }
-        if (!left && leftPressed)
+        if (!left && leftPressed&&!fowardPressed && !rightPressed && !backPressed)
         {
             transform.position += transform.TransformDirection(Vector3.left) * Time.deltaTime * movementSpeed * 2.5f;
             left = true;
@@ -49,7 +49,7 @@ public class Movement : MonoBehaviour
         {
             left = false;
         }
-        if (!right && rightPressed)
+        if (!right && rightPressed && !fowardPressed && !backPressed && !leftPressed)
         {
             transform.position -= transform.TransformDirection(Vector3.left) * Time.deltaTime * movementSpeed * 2.5f;
             right = true;

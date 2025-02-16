@@ -11,6 +11,7 @@ public class EquipmentManager : MonoBehaviour
     private Animator anim;
     private Inventory inventory;
     private BulletSpawner bulletSpawner;
+    private PlayerHUD HUD;
 
     [SerializeField] weapon deafultWeapon = null;
     private void Start()
@@ -48,6 +49,7 @@ public class EquipmentManager : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         inventory = GetComponent<Inventory>();
         bulletSpawner = GetComponent<BulletSpawner>();
+        HUD = GetComponent<PlayerHUD>();
     }
 
   
@@ -55,8 +57,10 @@ public class EquipmentManager : MonoBehaviour
     {
         current = (int)Weapon.weaponstyle;
         anim.SetInteger("Typ", (int)Weapon.type);
-        currentGun=Instantiate(Weapon.prefab, GunHolder);
         inventoriGun= Instantiate(Weapon.prefab, GunInventory);
+        currentGun = Instantiate(Weapon.prefab, GunHolder);
+        HUD.UpdateWeapinUI(Weapon);
+
     }
      private void UnequipWeapon()
     {

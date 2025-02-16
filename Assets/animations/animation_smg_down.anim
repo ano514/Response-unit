@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: animation_smg_up
+  m_Name: animation_smg_down
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -6876,7 +6876,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.33333334
-    functionName: DestroyWeapon
+    functionName: InstantiateWeapon
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
