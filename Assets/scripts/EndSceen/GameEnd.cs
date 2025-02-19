@@ -15,6 +15,7 @@ public class GameEnd : MonoBehaviour
     {
         if (PointSystem.civilianarrest+PointSystem.civiliankilled == Civilian.Length && PointSystem.enemyarrest + PointSystem.enemykilled == Enemy.Length)
         {
+            Cursor.visible = true;
             SceneManager.LoadScene("EndScreen");
         }
     }

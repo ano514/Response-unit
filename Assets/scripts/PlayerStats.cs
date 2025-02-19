@@ -31,6 +31,7 @@ public class PlayerStats : CharacterStats
     {
         if (isDead)
         {
+            Cursor.visible = true;
             SceneManager.LoadScene("DeadScreen");  
         }
     }

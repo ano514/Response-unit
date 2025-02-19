@@ -508,6 +508,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c86c7a83272252438e9a2eb03a75a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CivilArr: {fileID: 0}
+  CivilDead: {fileID: 0}
+  EnemArr: {fileID: 0}
+  EnemDead: {fileID: 0}
 --- !u!1 &1187587725
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,7 +763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -266.40002, y: -460.6}
+  m_AnchoredPosition: {x: 22.600037, y: -460.6}
   m_SizeDelta: {x: 104.9275, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308026507
@@ -995,7 +999,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1677574700
 RectTransform:
   m_ObjectHideFlags: 0

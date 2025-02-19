@@ -22,6 +22,7 @@ public class Loedaut : MonoBehaviour
     }
     public void DropdownPrimary(int val)
     {
+
         if (val == 0)
         {
             LodautSaver.Primary = Primary1;
