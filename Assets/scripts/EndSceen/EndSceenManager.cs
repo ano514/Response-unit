@@ -10,6 +10,7 @@ public class EndSceenManager : MonoBehaviour
     public TMP_Text EnemDead;
     private void Start()
     {
+        Cursor.visible = true;
         string ca = CivilArr.text;
         ca = PointSystem.civilianarrest.ToString();
         string ce = CivilDead.text;

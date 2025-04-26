@@ -5,6 +5,7 @@ public class DoorControler : MonoBehaviour
     public bool open =false;
     private int cislo = 0;
     private Animator anim;
+    public Animator an;
 
     private void Start()
     {
@@ -36,7 +37,8 @@ public class DoorControler : MonoBehaviour
                 anim.SetTrigger("Closed");
             }
             if (Input.GetKeyDown(KeyCode.Space))
-            {
+            { 
+                an.SetTrigger("Kick");
                 if (cislo == 3)
                 {
                     cislo = 0;

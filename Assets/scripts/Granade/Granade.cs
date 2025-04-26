@@ -54,7 +54,6 @@ public class Granade : MonoBehaviour
         }
         if (!on&&isExplode)
         {
-            Debug.Log("Ahoj");
             Destroy(gameObject);
         }
 
@@ -108,28 +107,29 @@ public class Granade : MonoBehaviour
                             Debug.DrawRay(rayPlayer.origin, rayPlayer.direction * sightDistance);
 
                         }
-                        else if (Physics.Raycast(rayEnemy, out hitInfoEnemy, sightDistance))
+                        if (Physics.Raycast(rayEnemy, out hitInfoEnemy, sightDistance))
                         {
                             if (hitInfoEnemy.transform.gameObject == enemy[i])
                             {
+                                Debug.DrawRay(rayEnemy.origin, rayEnemy.direction * sightDistance);
                                 ter = enemy[i].GetComponent<Terorist>();
                                 ter.Flash();
 
 
-                                Debug.DrawRay(rayEnemy.origin, rayEnemy.direction * sightDistance);
                             }
+                            Debug.DrawRay(rayEnemy.origin, rayEnemy.direction * sightDistance);
 
                         }
-                        else if (Physics.Raycast(rayCivil, out hitInfoCivil, sightDistance))
+                        if (Physics.Raycast(rayCivil, out hitInfoCivil, sightDistance))
                         {
                             if (hitInfoEnemy.transform.gameObject == enemy[i])
                             {
+                                Debug.DrawRay(rayCivil.origin, rayCivil.direction * sightDistance);
                                 sur = civil[i].GetComponent<Surrender>();
                                 sur.Flash();
-
-
-                                Debug.DrawRay(rayCivil.origin, rayCivil.direction * sightDistance);
                             }
+                            Debug.DrawRay(rayCivil.origin, rayCivil.direction * sightDistance);
+                            Debug.Log(hitInfoEnemy.transform.gameObject);
 
                         }
 

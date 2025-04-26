@@ -14,6 +14,7 @@ public class BulletSpawner : MonoBehaviour
     private float lastShootTime = 0;
     private bool canShoot;
     private bool aim = false;
+    public AudioSource bang;
 
     [SerializeField] private Mask mask;
     [SerializeField] private int CurrentAmmo;
@@ -100,7 +101,10 @@ public class BulletSpawner : MonoBehaviour
             {
                 Debug.Log("Shoot");
                 lastShootTime = Time.time;
-
+                if (bang.isPlaying)
+                    bang.Stop();
+                    bang.Play();
+      
                 RaycastShoot(currentWeapon);
                 ammoManager.UseAmmo((int)currentWeapon.weaponstyle, 1, 0);
             }
@@ -141,6 +145,7 @@ public class BulletSpawner : MonoBehaviour
         inventory = GetComponentInParent<Inventory>();
         manager = GetComponentInParent<EquipmentManager>();
         ammoManager = GetComponentInParent<AmmoManager>();
+        bang = GetComponentInChildren<AudioSource>();
 
     }
 

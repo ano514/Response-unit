@@ -8,9 +8,8 @@ public class ShowAmmo : MonoBehaviour
 
     public void UpdateInfo(int magazineSize, int magazineCount)
     {
-        magazineSizeText.text=magazineSize.ToString();
         int magazineCountAmount = magazineSize * magazineCount;
-        magdazineCountText.text=magazineCountAmount.ToString();
+        UpdateAmmoUI(magazineSize, magazineCountAmount);
     }
 
     public void UpdateAmmoUI(int magazineSize, int storedAmmo)

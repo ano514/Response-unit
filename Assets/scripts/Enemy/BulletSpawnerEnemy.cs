@@ -11,6 +11,7 @@ public class BulletSpawnerEnemy : MonoBehaviour
     private float lastShootTime = 0;
     private bool canShoot;
     private bool aim = false;
+    public AudioSource bang;
 
 
     [SerializeField] private int CurrentAmmo;
@@ -62,6 +63,9 @@ public class BulletSpawnerEnemy : MonoBehaviour
             if (Time.time > lastShootTime + currentWeapon.fireRate)
             {
                 lastShootTime = Time.time;
+                if (bang.isPlaying)
+                    bang.Stop();
+                    bang.Play();
 
                 RaycastShoot(Terorist.deafultWeapon);
                 Terorist.UseAmmo(1);
@@ -73,6 +77,7 @@ public class BulletSpawnerEnemy : MonoBehaviour
     private void Reference()
     {
         Terorist = GetComponentInParent<Terorist>();
+        bang = GetComponentInChildren<AudioSource>();
 
     }
 

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CivilStats : CharacterStats
 {
+
+
     void Start()
     {
         InitVariables(health, shield);

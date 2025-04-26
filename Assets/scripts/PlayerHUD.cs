@@ -16,7 +16,7 @@ public class PlayerHUD : MonoBehaviour
 
     public void UpdateWeapinUI(weapon newWeapon)
     {
-        ammo.UpdateInfo(newWeapon.magdazineSize, newWeapon.magazineCount*newWeapon.magdazineSize);
+        ammo.UpdateInfo(newWeapon.magdazineSize, newWeapon.magazineCount);
     }
 
     public void UpdateWeaponAmmoUI(int curentAmmo, int storedAmmo)
@@ -32,6 +32,7 @@ public class PlayerHUD : MonoBehaviour
     private void Start()
     {
         stats = GetComponent<PlayerStats>();
+        ammo = GetComponent<ShowAmmo>();
 
     }
 }

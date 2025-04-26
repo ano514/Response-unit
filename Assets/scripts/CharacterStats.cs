@@ -51,7 +51,7 @@ public class CharacterStats : MonoBehaviour
     public void SetShieldTo(int shieldToSetTo)
     {
         Shield = shieldToSetTo;
-        CheckHealth();
+        CheckShield();
     }
     public void TakeDamage(int damage)
     {
