@@ -175,7 +175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hlavne Menu
+  m_text: "Hlavn\xE9 Menu"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -513,6 +513,7 @@ MonoBehaviour:
   CivilDead: {fileID: 0}
   EnemArr: {fileID: 0}
   EnemDead: {fileID: 0}
+  Answer: {fileID: 0}
 --- !u!82 &1128319357
 AudioSource:
   m_ObjectHideFlags: 0
@@ -523,8 +524,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 4032015472818493073, guid: a47c77d6bada7cc4fb68ae1acdf4c978, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 60175eda385d2a04ea9ea841dff7014c, type: 3}
-  m_Resource: {fileID: 8300000, guid: 60175eda385d2a04ea9ea841dff7014c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9ab3d6f0cd8413e46a24b1824b6f0ddd, type: 3}
+  m_Resource: {fileID: 8300000, guid: 9ab3d6f0cd8413e46a24b1824b6f0ddd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1269,7 +1270,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ste Mrtvy
+  m_text: "Ste M\u0155tvy"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}

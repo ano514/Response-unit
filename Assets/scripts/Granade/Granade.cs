@@ -3,9 +3,10 @@ using UnityEngine.Rendering;
 
 public class Granade : MonoBehaviour
 {
-    public float delay = 3f;
+    public float delay = 10f;
     public float fieldOfView = 360f;
-    public float sightDistance = 30f;
+    public float sightDistance = 15f;
+    public float eyeHeight;
     public Volume volume;
     public CanvasGroup AlphaController;
     public AudioSource bang;
@@ -41,9 +42,8 @@ public class Granade : MonoBehaviour
         }
         if (on == true)
         {
-            Time.timeScale = 0.1f;
-            AlphaController.alpha = AlphaController.alpha - Time.deltaTime * 2;
-            volume.weight = volume.weight - Time.deltaTime * 2;
+            AlphaController.alpha = AlphaController.alpha - 0.01f;
+            volume.weight = volume.weight - 0.01f;
             if (AlphaController.alpha <= 0)
             {
                 volume.weight = 0;
@@ -56,7 +56,21 @@ public class Granade : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        for (int j = 0; j < civil.Length; j++)
+        {
+            Vector3 targetDiregtionCivil = civil[j].transform.position - transform.position - Vector3.down;
+            Ray rayCivil = new Ray(transform.position, targetDiregtionCivil);
+            Debug.DrawRay(rayCivil.origin, rayCivil.direction * sightDistance);
+            RaycastHit hitInfoCivil = new RaycastHit();
+            Debug.Log(civil[j]);
+            //if (Physics.Raycast(rayCivil, out hitInfoCivil, sightDistance))
+            //{
+              //  Debug.Log(hitInfoCivil.transform.gameObject);
+            //}
+        }
+        Vector3 targetDiregtionPlayer = player.transform.position - transform.position;
+        Ray rayPlayer = new Ray(transform.position, targetDiregtionPlayer);
+        Debug.DrawRay(rayPlayer.origin, rayPlayer.direction * sightDistance);
 
     }
     private void References()
@@ -83,11 +97,11 @@ public class Granade : MonoBehaviour
             {
                 for (int j = 0; j < civil.Length; j++)
                 {
-                    if (Vector3.Distance(transform.position, player.transform.position) < sightDistance || Vector3.Distance(transform.position, enemy[i].transform.position) < sightDistance)
+                    if (Vector3.Distance(transform.position, player.transform.position) < sightDistance || Vector3.Distance(transform.position, enemy[i].transform.position) < sightDistance || Vector3.Distance(transform.position, civil[j].transform.position) < sightDistance)
                     {
                         Vector3 targetDiregtionPlayer = player.transform.position - transform.position;
-                        Vector3 targetDiregtionEnemy = enemy[i].transform.position - transform.position;
-                        Vector3 targetDiregtionCivil = civil[j].transform.position - transform.position;
+                        Vector3 targetDiregtionEnemy = enemy[i].transform.position - transform.position- Vector3.down;
+                        Vector3 targetDiregtionCivil = civil[j].transform.position - transform.position - Vector3.down;
 
                         Ray rayPlayer = new Ray(transform.position, targetDiregtionPlayer);
                         Ray rayEnemy = new Ray(transform.position, targetDiregtionEnemy);
@@ -120,16 +134,16 @@ public class Granade : MonoBehaviour
                             Debug.DrawRay(rayEnemy.origin, rayEnemy.direction * sightDistance);
 
                         }
+                       
                         if (Physics.Raycast(rayCivil, out hitInfoCivil, sightDistance))
                         {
-                            if (hitInfoEnemy.transform.gameObject == enemy[i])
+                            if (hitInfoCivil.transform.gameObject == civil[j])
                             {
-                                Debug.DrawRay(rayCivil.origin, rayCivil.direction * sightDistance);
                                 sur = civil[i].GetComponent<Surrender>();
                                 sur.Flash();
                             }
                             Debug.DrawRay(rayCivil.origin, rayCivil.direction * sightDistance);
-                            Debug.Log(hitInfoEnemy.transform.gameObject);
+                            Debug.Log(hitInfoCivil.transform.gameObject);
 
                         }
 

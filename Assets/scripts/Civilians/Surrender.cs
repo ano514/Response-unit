@@ -6,7 +6,7 @@ public class Surrender : MonoBehaviour
     private NavMeshAgent agent;
     private Animator anim;
     private bool flash = false;
-    private float flashdelay = 5f;
+    private float flashdelay = 10f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,10 +19,12 @@ public class Surrender : MonoBehaviour
         if (flash == true)
         {
             flashdelay -= Time.deltaTime;
+
             if (flashdelay <= 0)
             {
+                anim.SetBool("Flash", false);
                 flash = false;
-                flashdelay = 5f;
+                flashdelay = 10f;
                 agent.isStopped = false;
             }
         }
@@ -45,7 +47,7 @@ public class Surrender : MonoBehaviour
     public void Flash()
     {
         agent.Stop();
-
+        anim.SetBool("Flash", true);
         flash = true;
     }
     private void Reference()

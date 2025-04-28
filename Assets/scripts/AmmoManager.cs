@@ -10,7 +10,7 @@ public class AmmoManager : MonoBehaviour
     [SerializeField] private int primaryCurrentAmmo;
     [SerializeField] private int primaryCurrentAmmoStorage;
     [SerializeField] private int secondaryCurrentAmmo;
-    [SerializeField] private int secondaryCurrentAmmoStorage;
+    [SerializeField] private int secondaryCurrentAmmoStorage;    
     [SerializeField] private bool primaryMagazineIsEmpty=false;
     [SerializeField] private bool secondaryMagazineIsEmpty =false;
     private void Start()
@@ -65,7 +65,7 @@ public class AmmoManager : MonoBehaviour
                 hud.UpdateWeaponAmmoUI(secondaryCurrentAmmo, secondaryCurrentAmmoStorage);
             }
         }
-    }
+        }
     public void Reload(int slot)
     {
         if (slot == 0)

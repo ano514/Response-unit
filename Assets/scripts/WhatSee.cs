@@ -7,6 +7,7 @@ public class WhatSee : MonoBehaviour
     private Terorist Terorist;
     private Enemy Enemy;
     private Surrender sur;
+    private PatrolState pS;
     [SerializeField] private AudioClip[] civilian;
     [SerializeField] private AudioClip[] suspect;
     [SerializeField] private AudioSource audio;
@@ -32,7 +33,7 @@ public class WhatSee : MonoBehaviour
                 {
                     if (!audio.isPlaying)
                     {
-                        audio.clip = civilian[Random.Range(0, civilian.Length - 1)];
+                        audio.clip = civilian[Random.Range(0, civilian.Length)];
                         audio.Play();
                     }
                     if (Random.Range(1, 100) > 10)
@@ -52,11 +53,12 @@ public class WhatSee : MonoBehaviour
                     {
                         if (!audio.isPlaying)
                         {
-                            audio.clip = suspect[Random.Range(0, suspect.Length - 1)];
+                            audio.clip = suspect[Random.Range(0, suspect.Length)];
                             audio.Play();
                         }
-                        if (Random.Range(1, 100) < 10)
+                        if (Random.Range(1, 100) < 45)
                         {
+                            Terorist = hit.collider.GetComponent<Terorist>();
                             Terorist.Surender();
                         }
                         else
@@ -87,6 +89,7 @@ public class WhatSee : MonoBehaviour
                     {
                         sur = hit.collider.GetComponent<Surrender>();
                         sur.Arest();
+
                     }
                 }
                 if (hit.collider.tag == "Enemy")

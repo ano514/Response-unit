@@ -81,20 +81,22 @@ public class Terorist : MonoBehaviour
     {
         return deafultWeapon;
     }
-    public void Surender()
-    {
-        agent.Stop();
-        anim.SetBool("Surender",true);
-    }
     public void Arrest()
     {
         if (anim.GetBool("Surender"))
         {
             anim.SetBool("Surender", false);
-            anim.SetBool("Arrest",true );
+            anim.SetBool("Arrest", true);
             PointSystem.EnemyArrestAddPoint(1);
         }
     }
+    public void Surender()
+    {
+        agent.Stop();
+        anim.SetBool("Surender", true);
+
+    }
+
     public void Flash()
     {
         agent.Stop();

@@ -175,7 +175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Zatknuty Teroristi:'
+  m_text: "Zatknut\xFD Teroristi:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Zatknuty Civlilisti: '
+  m_text: "Zatknut\xFD Civilisti: "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -1394,7 +1394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.6000366, y: 215.20001}
+  m_AnchoredPosition: {x: 3.6000366, y: 210.79999}
   m_SizeDelta: {x: 316.2, y: 90.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114019737
@@ -1632,7 +1632,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hlavne Menu
+  m_text: "Hlavn\xE9 Menu"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -2041,7 +2041,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Eliminovany Teroristi:'
+  m_text: "Eliminovan\xFD Teroristi:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -2353,7 +2353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Zabity Civlilisti: '
+  m_text: "Zabit\xFD Civilisti: "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -2445,6 +2445,7 @@ GameObject:
   - component: {fileID: 1989052364}
   - component: {fileID: 1989052363}
   - component: {fileID: 1989052367}
+  - component: {fileID: 1989052368}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2555,6 +2556,104 @@ MonoBehaviour:
   CivilDead: {fileID: 1087699090}
   EnemArr: {fileID: 218737625}
   EnemDead: {fileID: 1559733229}
+  Answer: {fileID: 1670562754}
+--- !u!82 &1989052368
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989052362}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4032015472818493073, guid: a47c77d6bada7cc4fb68ae1acdf4c978, type: 2}
+  m_audioClip: {fileID: 8300000, guid: dd76e3b19a4e89d4796b96f4507fb385, type: 3}
+  m_Resource: {fileID: 8300000, guid: dd76e3b19a4e89d4796b96f4507fb385, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -16,8 +16,8 @@ MonoBehaviour:
   description: 
   icon: {fileID: 21300000, guid: c1da3a255bdccc046bc999c6c7a138ad, type: 3}
   prefab: {fileID: 8066560090307213203, guid: 32d0c14793ffb6443aa3f90b427c8ece, type: 3}
-  magdazineSize: 0
-  magazineCount: 0
+  magdazineSize: 9
+  magazineCount: 1
   range: 0
   fireRate: 0
   spread: 0

@@ -40,4 +40,5 @@ public class PatrolState : BaseState
             enemy.anim.SetBool("GO?", false);
         }
     }
+
 }

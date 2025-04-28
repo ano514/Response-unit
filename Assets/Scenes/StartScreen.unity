@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2031,132 +2031,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404765796}
-  m_CullTransparentMesh: 1
---- !u!1 &441543211
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 441543212}
-  - component: {fileID: 441543215}
-  - component: {fileID: 441543214}
-  - component: {fileID: 441543213}
-  m_Layer: 5
-  m_Name: Scrollbar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &441543212
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441543211}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1242764294}
-  m_Father: {fileID: 1861872653}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -349.8}
-  m_SizeDelta: {x: 900, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &441543213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441543211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1100604537}
-  m_HandleRect: {fileID: 1100604536}
-  m_Direction: 0
-  m_Value: 0
-  m_Size: 0.2
-  m_NumberOfSteps: 0
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &441543214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441543211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &441543215
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441543211}
   m_CullTransparentMesh: 1
 --- !u!1 &446700339
 GameObject:
@@ -3632,7 +3506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Zapnu\u0165 Misiu"
+  m_text: "Zapn\xFA\u0165 Misiu"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -4228,7 +4102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kancel\xE1rksa Firma"
+  m_text: "Kancel\xE1rska Firma"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -5432,81 +5306,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099712071}
   m_CullTransparentMesh: 1
---- !u!1 &1100604535
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1100604536}
-  - component: {fileID: 1100604538}
-  - component: {fileID: 1100604537}
-  m_Layer: 5
-  m_Name: Handle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1100604536
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100604535}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1242764294}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1100604537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100604535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1100604538
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100604535}
-  m_CullTransparentMesh: 1
 --- !u!1 &1107075762
 GameObject:
   m_ObjectHideFlags: 0
@@ -5617,7 +5416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33.799988, y: 180.20001}
+  m_AnchoredPosition: {x: 33.799988, y: 215.09998}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1110643485
@@ -5640,7 +5439,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kancelarska firma je
+  m_text: "Oper\xE1tor, situ\xE1cia je nasledovn\xE1: M\xE1me hl\xE1sen\xFD incident
+    v kancel\xE1rskej budove na adrese [vlo\u017Ei\u0165 adresu]. Na mieste sa m\xF4\u017Ee
+    nach\xE1dza\u0165 jeden alebo viacero ozbrojen\xFDch p\xE1chate\u013Eov. Civiln\xE9
+    osoby sa v budove pravdepodobne st\xE1le nach\xE1dzaj\xFA \u2013 mus\xEDme po\u010D\xEDta\u0165
+    s ich pr\xEDtomnos\u0165ou.\r\n\r\nTvoja misia je jednoduch\xE1, ale riskantn\xE1:
+    vst\xFApi\u0165 do objektu, preveri\u0165 situ\xE1ciu, evakuova\u0165 civilistov
+    a v pr\xEDpade potreby neutralizova\u0165 hrozbu. P\xF4jde\u0161 s\xE1m, tak\u017Ee
+    bu\u010F maxim\xE1lne opatrn\xFD. Ka\u017Ed\xFD pohyb mus\xED by\u0165 premyslen\xFD.
+    Pristupuj k dver\xE1m kryt\xEDm, kontroluj rohy a miestnosti preh\u013Ead\xE1vaj
+    systematicky.\r\n\r\nP\xE1chate\u013E m\xF4\u017Ee by\u0165 kdeko\u013Evek. O\u010Dak\xE1vaj
+    odpor. Prioritou je minimalizova\u0165 riziko pre civilistov aj pre seba. Ke\u010F
+    n\xE1jde\u0161 civilov, okam\u017Eite ich informuj, aby zostali pokojn\xED a
+    priprav ich na evaku\xE1ciu.\r\n\r\nPam\xE4taj \u2013 si tam s\xE1m. \u017Diadne
+    zbyto\u010Dn\xE9 rizik\xE1. Ak sa situ\xE1cia vyhrot\xED, uprednostni vlastn\xFA
+    bezpe\u010Dnos\u0165 a volaj posily.\r\n\nBu\u010F r\xFDchly, tich\xFD a presn\xFD.
+    Hodne \u0161\u0165astia, oper\xE1tor."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -5667,8 +5481,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5705,7 +5519,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -195.96997, w: -18.290405}
+  m_margin: {x: 0, y: 0, z: -740.6362, w: -405.84134}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6057,7 +5871,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -6493,42 +6307,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!1 &1242764293
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1242764294}
-  m_Layer: 5
-  m_Name: Sliding Area
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1242764294
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242764293}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1100604536}
-  m_Father: {fileID: 441543212}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1261282173
 GameObject:
   m_ObjectHideFlags: 0
@@ -8530,7 +8308,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -8882,7 +8660,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Sekundarna Zbra\u0148"
+  m_text: "Sekund\xE1rna Zbra\u0148"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -9772,7 +9550,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 612284234}
-  - {fileID: 441543212}
   - {fileID: 1602112298}
   - {fileID: 404765797}
   m_Father: {fileID: 0}
@@ -10064,7 +9841,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Primarna Zbra\u0148"
+  m_text: "Prim\xE1rna Zbra\u0148"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -10236,7 +10013,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Briefing
+  m_text: "Br\xEDfing "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -10982,7 +10759,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vyzbroj
+  m_text: "V\xFDzbroj"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -12072,15 +11849,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pohyb:\r\n-\tPohybujete sa w,a,s,d(pohyb) a klavesami q,e(otacanie o 90
-    stupnou)\n\r\nStrielanie a mierenie:\r\n-\tPomocou lavym tlacidlom stirlate a
-    pravim tlacidlom mierite viacej presne\r\n-\tMi\u0161kou iba ovladate do akej
-    strany zbran miery ktora je iba limitovana 45 stupnou do prava a dolava\n\r\nVzdanie
-    a zatknutie civilistu/teroristu:\r\n-\tVzdanie funguje tak ze ak vydite but civilistu
-    alebo teroristu stalcite klavesu space aby sa vzdal ale davajte pozor pri teroristoch
-    ak poviete mu ak sa vzda je velka pravdepodobnust ze sa nevzda vsimne si vas
-    a zacne na vas stielat to iste niefunguje pri civilistovy\r\n-\tAk sa vzdal len
-    ku nemu pridete a drzite klavesu \u201EC\u201C a tak ho zatknete\r\n"
+  m_text: "Pohyb:\r\n\r\n-   Pohybujete sa pomocou kl\xE1ves W, A, S, D (pohyb) a
+    kl\xE1ves Q, E (ot\xE1\u010Danie o 90 stup\u0148ov).\r\n\r\nStre\u013Eba a mierenie:\r\n-  
+    \u013Dav\xFDm tla\u010Didlom my\u0161i strie\u013Eate, prav\xFDm tla\u010Didlom
+    my\u0161i mierite presnej\u0161ie.\r\n\r\n -   My\u0161ou ovl\xE1date smer, do
+    ktor\xE9ho zbra\u0148 mieri, pri\u010Dom je obmedzen\xFD na 45 stup\u0148ov do\u013Eava
+    a doprava.\r\n\r\nVzdanie a zatknutie civilistu/teroristu:\r\n -   Ak zbad\xE1te
+    civilistu alebo teroristu, stla\u010Dte kl\xE1ves Shift na vyzvanie k vzdaniu
+    sa.\r\n -   D\xE1vajte si pozor pri teroristoch \u2013 je ve\u013Ek\xE1 pravdepodobnos\u0165,
+    \u017Ee sa nevzdaj\xFA a za\u010Dn\xFA na v\xE1s strie\u013Ea\u0165. Civilisti
+    sa v\u017Edy vzdaj\xFA.\r\n -   Ak sa protivn\xEDk vzd\xE1, jednoducho k nemu
+    pr\xED\u010Fte a podr\u017Ete kl\xE1ves C na jeho zatknutie.\r\n\r\nDvere:\r\n
+    -   M\xF4\u017Eete sa stretn\xFA\u0165 s dvoma typmi dver\xED: zatvoren\xE9 alebo
+    otvoren\xE9.\r\n -   Pri zatvoren\xFDch dver\xE1ch mus\xEDte stla\u010Di\u0165
+    Space (medzern\xEDk) maxim\xE1lne 3-kr\xE1t, aby ste ich otvorili.\r\n -   Pri
+    otvoren\xFDch dver\xE1ch sta\u010D\xED stla\u010Di\u0165 kl\xE1ves F na ich otvorenie.\r\n
+    -   Po otvoren\xED zostan\xFA dvere natrvalo otvoren\xE9.\r\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
   m_sharedMaterial: {fileID: -996996154761897624, guid: d7e1ebdbea8603341b80005e448bc6bf, type: 2}
@@ -12107,8 +11891,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
